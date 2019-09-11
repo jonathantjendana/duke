@@ -3,7 +3,6 @@ package controllers;
 import duke.Duke;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
@@ -17,8 +16,6 @@ public class MainWindow {
     private VBox dialogContainer;
     @FXML
     private TextField userInput;
-    @FXML
-    private Button sendButton;
     @FXML
     private Label statusLabel;
 
@@ -55,6 +52,7 @@ public class MainWindow {
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException e) {
+                    //If it did not sleep, it is fine as this is only to simulate the bot as if it is fetching the data from elsewhere
                 }
                 return null;
             }
